@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+#2D033B #810CA8 #C147E9 #E5B8F4
+*/
+:root {
+    --color-1: #2D033B;
+    --color-2: #810CA8;
+    --color-3: #C147E9;
+    --color-4: #E5B8F4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.container {
+    width: 800px;
+    height: 60vh;
+    border-radius: 10px;
+    background: var(--color-2);
+    position: relative;
+}
+
+.container input {
+    border-radius: 10px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: var(--color-4);
+    color: var(--color-2);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    border: var(--color-4) solid 2px;
+}
+
+header {
+    margin: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color-4);
+    font-size: 50px;
+}
+
+header h2 {
+    color: var(--color-3);
+}
+
+.lab-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100%;
+    left: 200px;
+
+}
+
+#lab-1 {
+    background: var(--color-2);
+    color: var(--color-4);
+    border-bottom: var(--color-3) solid 5px;
+}
+
+.lab-item {
+    background: var(--color-1);
+    color: var(--color-2);
+    border-radius: 10px 10px 0 0;
+    width: 100px;
+    text-align: center;
+}
+
+.lab-item:hover {
+    cursor: pointer;
+    background: var(--color-2);
+    color: var(--color-4);
+    border-bottom: var(--color-3) solid 5px;
+}
+
+.layout {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#layout-1 {
+    display: flex;
+}
+
+.layout h2 {
+    color: var(--color-4);
+}
+
+.layout p {
+    font-size: 20px;
+    color: var(--color-4);
+}
+
+.output {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-3);
+    padding: 20px;
+    border-radius: 10px;
+}
