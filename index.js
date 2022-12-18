@@ -91,3 +91,20 @@ function ex2() {
     document.getElementById(`output-02`).style.display = "flex";
     document.getElementById(`output-2`).innerHTML = "S(n)=" + tinhSn(xEL, nEL);
 }
+
+/*
+ex3
+input:
+algorithm:
+output:
+*/
+function ex3() {
+    var nEL = document.getElementById(`input-3`).value * 1;
+    var tong = 1;
+    for (var i = 1; i <= nEL; i++) {
+        tong *= i;
+    }
+    console.log(tong);
+    document.getElementById(`output-03`).style.display = "flex";
+    document.getElementById(`output-3`).innerHTML = nEL + "! = " + tong;
+}
