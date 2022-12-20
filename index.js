@@ -64,7 +64,7 @@ function timN() {
     console.log(i);
     console.log(`tong` + tong);
     document.getElementById(`output-1`).innerHTML = `n = ` + i;
-    document.getElementById(`output-0`).style.display = "flex";
+    document.getElementById(`output-01`).style.display = "flex";
     return tong = 0;
 }
 /*
@@ -94,9 +94,13 @@ function ex2() {
 
 /*
 ex3
-input:
+input: 
+    + Nhập vào n
 algorithm:
+    + vòng lặp for điều kiện dừng là i > n
+    + tong nhân i khi vòng lặp thực hiện
 output:
+    + in ra kết quả giai thừa của n là tong
 */
 function ex3() {
     var nEL = document.getElementById(`input-3`).value * 1;
@@ -107,4 +111,46 @@ function ex3() {
     console.log(tong);
     document.getElementById(`output-03`).style.display = "flex";
     document.getElementById(`output-3`).innerHTML = nEL + "! = " + tong;
+}
+/*
+ex4
+input:
+    + div ở vị trí chẵn lẻ lần lượt là đỏ xanh
+algorithm:
+    + setDivChan() tạo 1 div chẵn và trả về thẻ div đó
+    + setDivLe() tạo 1 div lẻ và trả về thẻ div đó
+    + biến i = 0
+    + chạy vòng lặp while(i<10)
+     thực hiện tăng i lên 1
+     kiếm tra i nếu lẻ thì tạo div lẻ với tham sô i tương ứng
+     kiếm tra i nếu chẵn thì tạo div chẵn với tham sô i tương ứng
+*/
+function setDivChan(i) {
+    // tao new div
+    const newDiv = document.createElement(`div`);
+    newDiv.className = "div-item-chan";
+
+    const setText = document.createTextNode("Div chẵn " + i);
+    newDiv.appendChild(setText);
+    return newDiv;
+}
+function setDivLe(i) {
+    const newDiv = document.createElement(`div`);
+    newDiv.className = "div-item-le";
+    // set text div
+    const setText = document.createTextNode("Div lẻ " + i);
+    newDiv.appendChild(setText);
+    return newDiv;
+}
+var i = 0;
+function addDiv() {
+    const listDiv = document.getElementById('output-4');
+    while (i < 10) {
+        i++;
+        if (Math.floor(i % 2 == 0) && i <= 10) {
+            listDiv.insertBefore(setDivChan(i), null);
+        } else
+            listDiv.insertBefore(setDivLe(i), null);
+    }
+
 }

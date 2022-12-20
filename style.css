@@ -35,6 +35,7 @@ body {
     border-radius: 10px;
     height: 40px;
     font-size: 20px;
+    margin: 30px 0;
 }
 
 .btn {
@@ -44,6 +45,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     padding: 10px;
+    margin: 30px 0;
 }
 
 .btn:hover {
@@ -102,8 +104,9 @@ header h2 {
     height: 100%;
     display: none;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 20px;
 }
 
 #layout-1 {
@@ -127,4 +130,37 @@ header h2 {
     background-color: var(--color-3);
     padding: 20px;
     border-radius: 10px;
+}
+
+#output-4 {
+    background-color: var(--color-4);
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-item-chan {
+    width: 10%;
+    height: 100%;
+    font-weight: 700;
+    color: white;
+    font-size: 12px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-item-le {
+    width: 10%;
+    height: 100%;
+    font-weight: 700;
+    color: white;
+    font-size: 12px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
